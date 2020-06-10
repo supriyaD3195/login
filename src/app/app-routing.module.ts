@@ -7,11 +7,10 @@ import { from } from 'rxjs';
 
 const routes: Routes = [
 
+{path:'home',component:HomeComponent},
+{path:'login',component:LoginComponent},
 { path: '', redirectTo: 'home', pathMatch: 'full' },
 
-{path:'home',component:HomeComponent},
-
-{path:'login',component:LoginComponent},
 ];
 
 @NgModule({
