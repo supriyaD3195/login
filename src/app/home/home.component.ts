@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import{BiodataService} from '../biodata.service';
 
 @Component({
   selector: 'app-home',
@@ -8,21 +7,13 @@ import { Message } from '@angular/compiler/src/i18n/i18n_ast';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+public showdata=[];
 
- username:string;
- password:string;
 
-  constructor(private router:Router) { }
+  constructor( private biodataservice:BiodataService) { }
 
   ngOnInit(): void {
+    this.biodataservice.biodata()
+    .subscribe(Data=>this.showdata=Data);
   }
-  btnclick(){
-if(this.username=="admin"  &&  this.password=="admin123")
-{
-
- this.router.navigate(['/login']);
 }
-else{
-alert("please correct your username and password");
-}
-}}

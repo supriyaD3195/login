@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title> Login Page </title>
-</head>
-<body>
-    <h1 >  Login Form </h1>
-    <form>
-        <div class="container">
-            <label>Username : </label>
-            <input type="text" placeholder="Enter Username" name="username" [(ngModel)]="username"required>
-            <label>Password : </label>
-            <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password"required>
-            <button type="submit"  (click)="btnclick()">Login</button>
-            <input type="checkbox" checked="checked"> Remember me
-            <button type="button" class="cancelbtn"> Cancel</button>
-            Forgot <a href="#"> password? </a>
-        </div>
-    </form>
-</body><app-root></app-root>
-</html>
+<h1><b>Data from json file is below</b></h1>
+
+<ul *ngFor = "let data of showdata">
+<li> {{data.id}}<br> {{data.title}} <br> {{data.body}}</li>
+</ul>
+
