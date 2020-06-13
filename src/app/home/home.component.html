@@ -1,6 +1,23 @@
-<h1><b>Data from json file is below</b></h1>
+<h1 class="text-dark"><b>Data from json file is below</b></h1>
+<br>
+<br>
 
-<ul *ngFor = "let data of showdata">
-<li> {{data.id}}<br> {{data.title}} <br> {{data.body}}</li>
-</ul>
-
+<table class="table table-bordered">
+  <thead class="thead-dark" style="text-align: center;">
+    <tr>
+      <th scope="col">UserID</th>
+      <th scope="col">id</th>
+      <th scope="col">title</th>
+      <th scope="col">body</th>
+    </tr>
+  </thead>
+  <br />
+  <tbody *ngFor="let data of showdata">
+    <tr>
+      <th scope="row">1</th>
+      <td>{{ data.id }}</td>
+      <td>{{ data.title }}</td>
+      <td>{{ data.body }}</td>
+    </tr>
+  </tbody>
+</table>
